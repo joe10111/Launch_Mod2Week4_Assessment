@@ -7,6 +7,7 @@
 
 ## Questions (8 points possible)
 1. In your own words, how would you define an ORM?
+ORM stands for Object Relational Mapping. ORMs allow the programmer to build connections between c# classes and our database tables. In this case, we are using the Microsoft Enity framework as our ORM, which takes our c# classes and generates tables and queries to select and transform the data. 
 
 2. Given the two classes for bike and owner, update the classes to include a one-to-many relationship where each bike has one owner, and each owner can have many bikes.
 
@@ -18,6 +19,7 @@
             public int Id { get; set; }
             public string Type { get; set; }
             public DateTime PurchaseDate { get; set; }
+            public Owner OwnerOfBike { get; set; }
         }
     }
 
@@ -28,11 +30,13 @@
             public int Id { get; set; }
             public string Name { get; set; }
             public int Zipcode { get; set; }
+            public List<Bike> BikesOwned;
         }
     }
     ```
 
 3. When adding a new pizza table to our database, which of the following two commands would we run first? Why is it important to run these two line in that order?
+The add-migration command would run first, in this case, to first initialize the structure of the database by adding our pizza table with the corresponding properties that will get transformed into columns. Once you run the add-migration you can then run the update-database, which will push the pizza table to the local database. 
     ```
     add-migration AddPizzaTable
     ```
@@ -42,8 +46,11 @@
 
 4. For all three parts of this question, imagine that you have used Entity Framework to create a database table using the following class and context. 
     * What will the table name be?
+        * The table name will be `Bike` since the public class is named bikes
     * What will the column name(s) be?
+        * ID, Type, and Date   
     * What is the name of the database you are connecting to?
+        * The name is `Bikes` as defined inside the OnConfiguring method call
 
     ```C#
     namespace BikeApp
@@ -69,7 +76,8 @@
 5. What type of data does the `Contains` LINQ method return?
     <br> a. String 
     <br> b. Integer 
-    <br> c. Boolean
+    <br> **c. Boolean**
+    My awnser is : **c**
 
 ## Exercise (5 points possible)
 
