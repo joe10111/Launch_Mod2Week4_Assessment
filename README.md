@@ -81,9 +81,8 @@ The add-migration command would run first, in this case, to first initialize the
 
 ## Exercise (5 points possible)
 
-Fork the Replit below, and complete the 5 LINQ exercises.  Add a link to your forked repl here: <YOUR LINK HERE>
-
-[https://replit.com/@launch-team/Mod2Week4Assessment](https://replit.com/@launch-team/Mod2Week4Assessment?v=1)
+Fork the Replit below, and complete the 5 LINQ exercises.  Add a link to your forked repl here: 
+MY LINK : [https://replit.com/@joe1011/Mod2Week4Assessment#main.cs]
 
 ### Submission
 * Submit a link to your forked repository in the Submission form provided in your slack channel.
